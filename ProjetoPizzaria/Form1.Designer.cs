@@ -46,8 +46,9 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.grpOpicionais = new System.Windows.Forms.Label();
+            this.gpboxOpicionais = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.gpboxOpicionais.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnNovo
@@ -106,7 +107,7 @@
             // chkBorda
             // 
             this.chkBorda.AutoSize = true;
-            this.chkBorda.Location = new System.Drawing.Point(69, 128);
+            this.chkBorda.Location = new System.Drawing.Point(6, 25);
             this.chkBorda.Name = "chkBorda";
             this.chkBorda.Size = new System.Drawing.Size(126, 17);
             this.chkBorda.TabIndex = 6;
@@ -116,7 +117,7 @@
             // chkCebola
             // 
             this.chkCebola.AutoSize = true;
-            this.chkCebola.Location = new System.Drawing.Point(71, 151);
+            this.chkCebola.Location = new System.Drawing.Point(6, 57);
             this.chkCebola.Name = "chkCebola";
             this.chkCebola.Size = new System.Drawing.Size(136, 17);
             this.chkCebola.TabIndex = 7;
@@ -126,7 +127,7 @@
             // chkCatupiry
             // 
             this.chkCatupiry.AutoSize = true;
-            this.chkCatupiry.Location = new System.Drawing.Point(71, 174);
+            this.chkCatupiry.Location = new System.Drawing.Point(6, 80);
             this.chkCatupiry.Name = "chkCatupiry";
             this.chkCatupiry.Size = new System.Drawing.Size(134, 17);
             this.chkCatupiry.TabIndex = 8;
@@ -136,7 +137,7 @@
             // chkTempero
             // 
             this.chkTempero.AutoSize = true;
-            this.chkTempero.Location = new System.Drawing.Point(71, 197);
+            this.chkTempero.Location = new System.Drawing.Point(6, 103);
             this.chkTempero.Name = "chkTempero";
             this.chkTempero.Size = new System.Drawing.Size(117, 17);
             this.chkTempero.TabIndex = 9;
@@ -209,21 +210,25 @@
             this.textBox4.Size = new System.Drawing.Size(95, 20);
             this.textBox4.TabIndex = 17;
             // 
-            // grpOpicionais
+            // gpboxOpicionais
             // 
-            this.grpOpicionais.AutoSize = true;
-            this.grpOpicionais.Location = new System.Drawing.Point(68, 106);
-            this.grpOpicionais.Name = "grpOpicionais";
-            this.grpOpicionais.Size = new System.Drawing.Size(128, 13);
-            this.grpOpicionais.TabIndex = 18;
-            this.grpOpicionais.Text = "ESCOLHAS OPICIONAIS";
+            this.gpboxOpicionais.Controls.Add(this.chkBorda);
+            this.gpboxOpicionais.Controls.Add(this.chkCebola);
+            this.gpboxOpicionais.Controls.Add(this.chkCatupiry);
+            this.gpboxOpicionais.Controls.Add(this.chkTempero);
+            this.gpboxOpicionais.Location = new System.Drawing.Point(12, 87);
+            this.gpboxOpicionais.Name = "gpboxOpicionais";
+            this.gpboxOpicionais.Size = new System.Drawing.Size(220, 135);
+            this.gpboxOpicionais.TabIndex = 19;
+            this.gpboxOpicionais.TabStop = false;
+            this.gpboxOpicionais.Text = "ESCOLHAS OPICIONAIS";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.grpOpicionais);
+            this.Controls.Add(this.gpboxOpicionais);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
@@ -232,10 +237,6 @@
             this.Controls.Add(this.lblValorPagar);
             this.Controls.Add(this.lblOpicionais);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.chkTempero);
-            this.Controls.Add(this.chkCatupiry);
-            this.Controls.Add(this.chkCebola);
-            this.Controls.Add(this.chkBorda);
             this.Controls.Add(this.lblValorPizza);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btbSair);
@@ -245,6 +246,8 @@
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.gpboxOpicionais.ResumeLayout(false);
+            this.gpboxOpicionais.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,7 +273,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label grpOpicionais;
+        private System.Windows.Forms.GroupBox gpboxOpicionais;
     }
 }
 
