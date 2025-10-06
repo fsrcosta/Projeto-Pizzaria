@@ -33,7 +33,7 @@
             this.btnCalcular = new System.Windows.Forms.Button();
             this.btbSair = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lblValorPizza = new System.Windows.Forms.ComboBox();
+            this.cmbTamahoPizza = new System.Windows.Forms.ComboBox();
             this.chkBorda = new System.Windows.Forms.CheckBox();
             this.chkCebola = new System.Windows.Forms.CheckBox();
             this.chkCatupiry = new System.Windows.Forms.CheckBox();
@@ -42,10 +42,10 @@
             this.lblOpicionais = new System.Windows.Forms.Label();
             this.lblValorPagar = new System.Windows.Forms.Label();
             this.lblPesquisar = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtValorPizza = new System.Windows.Forms.TextBox();
+            this.txtValorOpcionais = new System.Windows.Forms.TextBox();
+            this.txtValorPagar = new System.Windows.Forms.TextBox();
+            this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.gpboxOpicionais = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.gpboxOpicionais.SuspendLayout();
@@ -77,6 +77,7 @@
             this.btnCalcular.TabIndex = 2;
             this.btnCalcular.Text = "CALCULAR";
             this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
             // btbSair
             // 
@@ -95,14 +96,14 @@
             this.dataGridView1.Size = new System.Drawing.Size(522, 119);
             this.dataGridView1.TabIndex = 4;
             // 
-            // lblValorPizza
+            // cmbTamahoPizza
             // 
-            this.lblValorPizza.FormattingEnabled = true;
-            this.lblValorPizza.Location = new System.Drawing.Point(71, 60);
-            this.lblValorPizza.Name = "lblValorPizza";
-            this.lblValorPizza.Size = new System.Drawing.Size(121, 21);
-            this.lblValorPizza.TabIndex = 5;
-            this.lblValorPizza.Text = "TAMANHO DA PIZZA";
+            this.cmbTamahoPizza.FormattingEnabled = true;
+            this.cmbTamahoPizza.Location = new System.Drawing.Point(39, 42);
+            this.cmbTamahoPizza.Name = "cmbTamahoPizza";
+            this.cmbTamahoPizza.Size = new System.Drawing.Size(121, 21);
+            this.cmbTamahoPizza.TabIndex = 5;
+            this.cmbTamahoPizza.Text = "TAMANHO DA PIZZA";
             // 
             // chkBorda
             // 
@@ -182,33 +183,33 @@
             this.lblPesquisar.TabIndex = 13;
             this.lblPesquisar.Text = "PESQUISAR";
             // 
-            // textBox1
+            // txtValorPizza
             // 
-            this.textBox1.Location = new System.Drawing.Point(274, 109);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(95, 20);
-            this.textBox1.TabIndex = 14;
+            this.txtValorPizza.Location = new System.Drawing.Point(274, 109);
+            this.txtValorPizza.Name = "txtValorPizza";
+            this.txtValorPizza.Size = new System.Drawing.Size(95, 20);
+            this.txtValorPizza.TabIndex = 14;
             // 
-            // textBox2
+            // txtValorOpcionais
             // 
-            this.textBox2.Location = new System.Drawing.Point(397, 109);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(95, 20);
-            this.textBox2.TabIndex = 15;
+            this.txtValorOpcionais.Location = new System.Drawing.Point(397, 109);
+            this.txtValorOpcionais.Name = "txtValorOpcionais";
+            this.txtValorOpcionais.Size = new System.Drawing.Size(95, 20);
+            this.txtValorOpcionais.TabIndex = 15;
             // 
-            // textBox3
+            // txtValorPagar
             // 
-            this.textBox3.Location = new System.Drawing.Point(533, 109);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(95, 20);
-            this.textBox3.TabIndex = 16;
+            this.txtValorPagar.Location = new System.Drawing.Point(533, 109);
+            this.txtValorPagar.Name = "txtValorPagar";
+            this.txtValorPagar.Size = new System.Drawing.Size(95, 20);
+            this.txtValorPagar.TabIndex = 16;
             // 
-            // textBox4
+            // txtPesquisar
             // 
-            this.textBox4.Location = new System.Drawing.Point(447, 195);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(95, 20);
-            this.textBox4.TabIndex = 17;
+            this.txtPesquisar.Location = new System.Drawing.Point(447, 195);
+            this.txtPesquisar.Name = "txtPesquisar";
+            this.txtPesquisar.Size = new System.Drawing.Size(95, 20);
+            this.txtPesquisar.TabIndex = 17;
             // 
             // gpboxOpicionais
             // 
@@ -229,15 +230,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.gpboxOpicionais);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPesquisar);
+            this.Controls.Add(this.txtValorPagar);
+            this.Controls.Add(this.txtValorOpcionais);
+            this.Controls.Add(this.txtValorPizza);
             this.Controls.Add(this.lblPesquisar);
             this.Controls.Add(this.lblValorPagar);
             this.Controls.Add(this.lblOpicionais);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblValorPizza);
+            this.Controls.Add(this.cmbTamahoPizza);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btbSair);
             this.Controls.Add(this.btnCalcular);
@@ -245,6 +246,7 @@
             this.Controls.Add(this.btnNovo);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.gpboxOpicionais.ResumeLayout(false);
             this.gpboxOpicionais.PerformLayout();
@@ -260,7 +262,7 @@
         private System.Windows.Forms.Button btnCalcular;
         private System.Windows.Forms.Button btbSair;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox lblValorPizza;
+        private System.Windows.Forms.ComboBox cmbTamahoPizza;
         private System.Windows.Forms.CheckBox chkBorda;
         private System.Windows.Forms.CheckBox chkCebola;
         private System.Windows.Forms.CheckBox chkCatupiry;
@@ -269,10 +271,10 @@
         private System.Windows.Forms.Label lblOpicionais;
         private System.Windows.Forms.Label lblValorPagar;
         private System.Windows.Forms.Label lblPesquisar;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtValorPizza;
+        private System.Windows.Forms.TextBox txtValorOpcionais;
+        private System.Windows.Forms.TextBox txtValorPagar;
+        private System.Windows.Forms.TextBox txtPesquisar;
         private System.Windows.Forms.GroupBox gpboxOpicionais;
     }
 }
