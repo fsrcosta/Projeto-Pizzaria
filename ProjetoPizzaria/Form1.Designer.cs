@@ -47,6 +47,7 @@
             this.txtValorPagar = new System.Windows.Forms.TextBox();
             this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.gpboxOpicionais = new System.Windows.Forms.GroupBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.gpboxOpicionais.SuspendLayout();
             this.SuspendLayout();
@@ -96,6 +97,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(522, 119);
             this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseDoubleClick);
             // 
             // cmbTamahoPizza
             // 
@@ -211,6 +213,7 @@
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(95, 20);
             this.txtPesquisar.TabIndex = 17;
+            this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged_1);
             // 
             // gpboxOpicionais
             // 
@@ -225,11 +228,19 @@
             this.gpboxOpicionais.TabStop = false;
             this.gpboxOpicionais.Text = "ESCOLHAS OPICIONAIS";
             // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Location = new System.Drawing.Point(594, 165);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(95, 20);
+            this.txtCodigo.TabIndex = 20;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.gpboxOpicionais);
             this.Controls.Add(this.txtPesquisar);
             this.Controls.Add(this.txtValorPagar);
@@ -277,6 +288,7 @@
         private System.Windows.Forms.TextBox txtValorPagar;
         private System.Windows.Forms.TextBox txtPesquisar;
         private System.Windows.Forms.GroupBox gpboxOpicionais;
+        private System.Windows.Forms.TextBox txtCodigo;
     }
 }
 

@@ -131,6 +131,66 @@ namespace ProjetoPizzaria
                 }
             }
         }
+
+
+        private void dataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            CarregarPedidos();
+
+        }
+
+        //Método que vai carregar as informações do datagrid
+        public void CarregarPedidos()
+        {
+            try
+            {
+                txtCodigo.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+                cmbTamahoPizza.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+                txtValorPizza.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+                txtValorOpcionais.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+                txtValorPagar.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Erros ao clicar" + error);
+            }
+
+        }
+
+
+
+        private void txtPesquisar_TextChanged_1(object sender, EventArgs e)
+        {
+            if (txtPesquisar.Text != "")
+            {
+                try
+                {
+                    con.ConnectarBD();
+                    MySqlCommand cmd = new MySqlCommand();
+                    cmd.CommandText = "select * from tbPedido";
+
+                    cmd.Connection = con.ConnectarBD();
+                    MySqlDataAdapter da = new MySqlDataAdapter();
+                    DataTable dt = new DataTable();
+                    da.SelectCommand = cmd;
+                    da.Fill(dt);
+                    dataGridView1.DataSource = dt;
+                    con.DesConnectarBD();
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show(error.Message);
+                }
+            }
+            else
+            {
+                //deixa o datagrid limpo
+                dataGridView1.DataSource = null;
+            }
+        }
     }
 }
+        
+    
 
